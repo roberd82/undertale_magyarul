@@ -1,0 +1,105 @@
+/*index*/
+@font-face {
+    font-family: '8bitoperator_jve';
+    src: url('8bitoperator_jve.ttf') format('truetype');
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: '8bitoperator_jve', 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 4.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* --- Navigációs Menü --- */
+.menu-container {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.btn {
+    border: 5px solid white;
+    padding: 12px 35px;
+    color: white;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    transition: 0.1s;
+}
+
+/* A piros szív sprite hoverre */
+.btn::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 26px;
+    margin-right: 15px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAAD9+994AAAAXklEQVRIie2VUQqAMAhE5//XnC7QRUvS5v0Igm+ZlYIu1M5M9X6D8l7I4J7I5I08O0gXy0S6WCbSxbKYLo6JdLFMpovjI4lXbT+16OOpRRePOnTxwI5q/VvW2wP060gXh5+Xn9eN7gAAAABJRU5ErkJggg==');
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    visibility: hidden;
+}
+
+.btn:hover {
+    color: #ffff00;
+    border-color: #ffff00;
+}
+
+.btn:hover::before {
+    visibility: visible;
+}
+
+/* --- Dialógus Doboz --- */
+.dialogue-wrapper {
+    border: 6px solid white;
+    width: 750px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    background-color: black;
+    align-items: center;
+}
+
+.face-portrait {
+    width: 110px;
+    height: 110px;
+    image-rendering: pixelated;
+    object-fit: contain;
+}
+
+.dialogue-text {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.yellow { color: #ffff00; }
+
+/* --- Mentési Pont --- */
+.save-point {
+    margin-top: 60px;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    color: #ffff00;
+    margin-right: 15px;
+    font-size: 2rem;
+}

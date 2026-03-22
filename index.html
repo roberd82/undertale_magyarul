@@ -2,139 +2,35 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
+	<meta name="theme-color" content="#000000">
     <title>Undertale Magyarul</title>
-    <style>
-        @font-face {
-            font-family: 'Determination';
-            src: url('determination.ttf') format('truetype');
-        }
-
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Determination', 'Courier New', monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 60px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            font-size: 4.5rem;
-            letter-spacing: 4px;
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        /* --- Navigációs Menü --- */
-        .menu-container {
-            display: flex;
-            gap: 25px;
-            margin-bottom: 80px;
-        }
-
-        .btn {
-            border: 5px solid white;
-            padding: 12px 35px;
-            color: white;
-            text-decoration: none;
-            font-size: 2.2rem;
-            display: flex;
-            align-items: center;
-            transition: 0.1s;
-        }
-
-        /* A piros szív sprite hoverre */
-        .btn::before {
-            content: "";
-            display: inline-block;
-            width: 30px;
-            height: 26px;
-            margin-right: 15px;
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAAD9+994AAAAXklEQVRIie2VUQqAMAhE5//XnC7QRUvS5v0Igm+ZlYIu1M5M9X6D8l7I4J7I5I08O0gXy0S6WCbSxbKYLo6JdLFMpovjI4lXbT+16OOpRRePOnTxwI5q/VvW2wP060gXh5+Xn9eN7gAAAABJRU5ErkJggg==');
-            background-size: contain;
-            background-repeat: no-repeat;
-            image-rendering: pixelated;
-            visibility: hidden;
-        }
-
-        .btn:hover {
-            color: #ffff00;
-            border-color: #ffff00;
-        }
-
-        .btn:hover::before {
-            visibility: visible;
-        }
-
-        /* --- Dialógus Doboz --- */
-        .dialogue-wrapper {
-            border: 6px solid white;
-            width: 750px;
-            padding: 30px;
-            display: flex;
-            gap: 30px;
-            background-color: black;
-            align-items: center;
-        }
-
-        .face-portrait {
-            width: 110px;
-            height: 110px;
-            image-rendering: pixelated;
-            object-fit: contain;
-        }
-
-        .dialogue-text {
-            font-size: 1.8rem;
-            line-height: 1.5;
-            flex: 1;
-        }
-
-        .yellow { color: #ffff00; }
-
-        /* --- Mentési Pont --- */
-        .save-point {
-            margin-top: 60px;
-            font-size: 1.6rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .star {
-            color: #ffff00;
-            margin-right: 15px;
-            font-size: 2rem;
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-
     <h1>UNDERTALE MAGYARUL</h1>
 
     <div class="menu-container">
-        <a href="hirek.html" class="btn">HÍREK</a>
-        <a href="allapot.html" class="btn">ÁLLAPOT</a>
-        <a href="letoltes.html" class="btn">LETÖLTÉS</a>
-        <a href="csapat.html" class="btn">CSAPAT</a>
+        <a href="hirek/" class="btn">HÍREK</a>
+        <a href="allapot/" class="btn">ÁLLAPOT</a>
+        <a href="letoltes/" class="btn">LETÖLTÉS</a>
+        <a href="csapat/" class="btn">CSAPAT</a>
     </div>
 
     <div class="dialogue-wrapper">
-        <img src="flowey.png" alt="Karakter portré" class="face-portrait">
+        <img src="assets/flowey.png" alt="Karakter portré" class="face-portrait">
         
         <div class="dialogue-text">
-            * Üdvözöllek! Flowey vagyok.<br>
-            * Flowey, a <span class="yellow">VIRÁG</span>!<br>
+            * Üdv! Én vagyok <span class="yellow">VIRÁGKA</span>.<br>
+            * <span class="yellow">VIRÁGKA</span> a <span class="yellow">VIRÁG</span>!<br>
             * Maradj elszánt a fordítás során!
         </div>
     </div>
 
     <div class="save-point">
-        <span class="star">★</span> 
-        * A magyarítás elkészültének gondolata eltölt <span class="yellow">ELSZÁNTSÁGGAL</span>.
+        <span class="star">★</span>
+        * A magyarítás elkészültének gondolata eltölt&nbsp;<span class="yellow">ELSZÁNTSÁGGAL</span>.
+        <!--Valamiért nem akar spece-t hagyni a span előtt, ezért a "&nbsp;" (non-breaking space)-->
     </div>
-
 </body>
 </html>
