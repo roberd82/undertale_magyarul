@@ -4,6 +4,11 @@
     src: url('8bitoperator_jve.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'MERCY';
+    src: url('mercy.otf.woff2') format('woff2');
+}
+
 body {
     background-color: black;
     color: white;
@@ -13,7 +18,20 @@ body {
     align-items: center;
     padding-top: 60px;
     margin: 0;
-    text-transform: uppercase;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: 80px;
+    border-top: 2px solid #333;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+    text-transform: none; /* Hogy olvashatóbb legyen a jogi szöveg */
 }
 
 h1 {
@@ -23,48 +41,93 @@ h1 {
     text-align: center;
 }
 
-/* --- Navigációs Menü --- */
-.menu-container {
-    display: flex;
-    gap: 25px;
-    margin-bottom: 80px;
+h2 {
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #ffff00;
 }
 
-.btn {
-    border: 5px solid white;
-    padding: 12px 35px;
-    color: white;
+/* -- Navigációs Menü -- */
+.battle-menu-container {
+    display: flex;
+    gap: 25px;
+    margin: 80px;
+}
+
+.battle-button {
+    border: 4px solid #ff7f27;
+    padding: 5px;
+    color: #ff7f27;
     text-decoration: none;
     font-size: 2.2rem;
     display: flex;
     align-items: center;
-    transition: 0.1s;
+    font-family: 'MERCY', 'Courier New', monospace;
 }
 
 /* A piros szív sprite hoverre */
-.btn::before {
+.battle-button::before {
     content: "";
     display: inline-block;
     width: 30px;
     height: 26px;
-    margin-right: 15px;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAYCAYAAAD9+994AAAAXklEQVRIie2VUQqAMAhE5//XnC7QRUvS5v0Igm+ZlYIu1M5M9X6D8l7I4J7I5I08O0gXy0S6WCbSxbKYLo6JdLFMpovjI4lXbT+16OOpRRePOnTxwI5q/VvW2wP060gXh5+Xn9eN7gAAAABJRU5ErkJggg==');
     background-size: contain;
     background-repeat: no-repeat;
     image-rendering: pixelated;
-    visibility: hidden;
+    margin-right: 0px;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
-.btn:hover {
+.battle-button.fight::before {
+    content: "#";
+}
+
+.battle-button.act::before {
+    content: "$";
+}
+
+.battle-button.item::before {
+    content: "%";
+}
+
+.battle-button.mercy::before {
+    content: "&";
+}
+
+.battle-button:hover {
     color: #ffff00;
     border-color: #ffff00;
 }
 
-.btn:hover::before {
-    visibility: visible;
+.battle-button:hover::before {
+    content: "";
+    background-image: url('red_SOUL.png');
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 0;
+    margin-bottom: 0px;
 }
 
-/* --- Dialógus Doboz --- */
+.back-button {
+    margin: 40px auto;
+    display: table;
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    border: 6px solid white;
+    padding: 10px 40px;
+    transition: 0.1s;
+}
+
+.back-button:hover {
+    color: #ffff00;
+    border-color: #ffff00; }
+
+/* -- Dialógus Doboz -- */
 .dialogue-wrapper {
     border: 6px solid white;
     width: 750px;
@@ -75,7 +138,7 @@ h1 {
     align-items: center;
 }
 
-.face-portrait {
+.dialogue-portrait {
     width: 110px;
     height: 110px;
     image-rendering: pixelated;
@@ -90,16 +153,36 @@ h1 {
 
 .yellow { color: #ffff00; }
 
-/* --- Mentési Pont --- */
-.save-point {
-    margin-top: 60px;
-    font-size: 1.6rem;
-    display: flex;
-    align-items: center;
+.container {
+    width: 100%;
+    max-width: 800px;
 }
 
-.star {
+/* --- HÍREK --- */
+.news-post {
+    background: black;
+    border: 6px solid white;
+    padding: 25px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.news-date {
+    color: #ff0000; /* Piros, mint a HP */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.news-title {
     color: #ffff00;
-    margin-right: 15px;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.news-content {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: white;
 }

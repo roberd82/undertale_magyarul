@@ -5,28 +5,8 @@
     <meta name="theme-color" content="#000000">
     <title>Csapat - Undertale Magyarul</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../assets/style.css" />
     <style>
-        @font-face {
-            font-family: '8bitoperator_jve';
-            src: url('../assets/8bitoperator_jve.ttf') format('truetype');
-        }
-
-        body {
-            background-color: black;
-            color: white;
-            font-family: '8bitoperator_jve', 'Courier New', monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 20px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .container { width: 100%; max-width: 750px; }
-
-        h2 { font-size: 3.5rem; color: #ffff00; text-align: center; margin-bottom: 60px; }
-
         .team-grid {
             display: flex;
             flex-direction: column;
@@ -94,32 +74,29 @@
             border-color: #ff0000;
         }
 
-        .back-btn {
-            margin-top: 60px;
-            display: inline-block;
-            color: white;
+        .linktree-btn {
+            background-color: #42e15e;
+            color: black;
             text-decoration: none;
-            font-size: 1.8rem;
-            border: 4px solid white;
-            padding: 10px 40px;
+            padding: 8px 15px;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            transition: 0.1s;
+            margin-left: 15px;
         }
 
-        .back-btn:hover { color: #ffff00; border-color: #ffff00; }
-
-        /* Jogi szöveg stílusa */
-        .disclaimer {
-            margin-top: 60px;
-            color: #666;
-            font-size: 0.9rem;
-            text-align: center;
-            text-transform: none;
+        .linktree-btn:hover {
+            background-color: black;
+            color: #42e15e;
+            border-color: #42e15e;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h2>A FORDÍTÓ CSAPAT</h2>
-
+    </header>
+    <main class="container">
         <div class="team-grid">
             
             <div class="member-card">
@@ -137,7 +114,7 @@
                     <span class="name">roberd</span>
                     <span class="role">Szövegek, Textúrák</span>
                 </div>
-                <a href="https://www.youtube.com/@roberd82-dev" target="_blank" class="yt-btn">YOUTUBE</a>
+                <a href="https://linktr.ee/roberd82" target="_blank" class="linktree-btn">LINKTREE</a>
             </div>
 
             <div class="member-card">
@@ -160,13 +137,7 @@
 
         </div>
 
-        <center>
-            <a href="../" class="back-btn">< VISSZA</a>
-        </center>
-
-        <div class="disclaimer">
-            * AZ UNDERTALE™ TOBY FOX VÉDJEGYE. EZ EGY NEM HIVATALOS FORDÍTÁS.
-        </div>
-    </div>
+        <a href="../" class="back-button">< VISSZA</a>
+    </main>
 </body>
 </html>
