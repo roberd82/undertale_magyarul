@@ -8,32 +8,33 @@
     <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-    <h1>UNDERTALE MAGYARUL</h1>
-
-    <div class="menu-container">
-        <a href="hirek/" class="btn">HÍREK</a>
-        <a href="allapot/" class="btn">ÁLLAPOT</a>
-        <a href="letoltes/" class="btn">LETÖLTÉS</a>
-        <a href="csapat/" class="btn">CSAPAT</a>
-    </div>
-
-    <div class="dialogue-wrapper">
-        <img src="assets/flowey.png" alt="Karakter portré" class="face-portrait">
-        
-        <div class="dialogue-text">
-            * Üdv! Én vagyok <span class="yellow">VIRÁGKA</span>.<br>
-            * <span class="yellow">VIRÁGKA</span> a <span class="yellow">VIRÁG</span>!<br>
-            * Maradj elszánt a fordítás során!
+    <header>
+        <h1>UNDERTALE MAGYARUL</h1><!--TODO: lecserélni a játék logójára, és alatta a magyarul felirat-->
+        <div class="dialogue-wrapper">
+            <img src="assets/flowey.png" alt="Virágka dialogus portré" class="dialogue-portrait">
+            
+            <div class="dialogue-text">
+                * Üdv! Én vagyok <span class="yellow">VIRÁGKA</span>.<br>
+                * <span class="yellow">VIRÁGKA</span> a <span class="yellow">VIRÁG</span>!<br>
+                * Maradj elszánt a fordítás során!
+            </div>
         </div>
-    </div>
-<div class="disclaimer">
-    AZ UNDERTALE™ TOBY FOX VÉDJEGYE ÉS TULAJDONA. <br>
-    EZ EGY NEM HIVATALOS, RAJONGÓI FORDÍTÁS.
-</div>
-    <div class="save-point">
-        <span class="star">★</span>
-        * A magyarítás elkészültének gondolata eltölt&nbsp;<span class="yellow">ELSZÁNTSÁGGAL</span>.
-        <!--Valamiért nem akar spece-t hagyni a span előtt, ezért a "&nbsp;" (non-breaking space)-->
-    </div>
+    </header>
+    
+    <main>
+        <!--Miután kész a fordítás, az "ÁLLAPOT" a menüpontot le lehetne cserélni egy "extrák" menüpontra
+            amiben mindenféle dolog lehetne, pl.: lefordított soundtrack címek meg hasonlók-->
+        <div class="battle-menu-container">
+            <a href="hirek/" class="battle-button fight">HÍREK</a>
+            <a href="letoltes/" class="battle-button act">LETÖLTÉS</a>
+            <a href="allapot/" class="battle-button item">HALADÁS</a>
+            <a href="csapat/" class="battle-button mercy">CSAPAT</a>
+        </div>
+    </main>
+
+    <footer class="container">
+        AZ UNDERTALE™ TOBY FOX VÉDJEGYE ÉS TULAJDONA.</br>
+        EZ EGY NEM HIVATALOS, RAJONGÓI FORDÍTÁS.
+    </footer>
 </body>
 </html>

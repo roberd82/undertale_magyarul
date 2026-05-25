@@ -5,98 +5,23 @@
     <meta name="theme-color" content="#000000">
     <title>Hírek - Undertale Magyarul</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <style>
-        @font-face {
-            font-family: '8bitoperator_jve';
-            src: url('../assets/8bitoperator_jve.ttf') format('truetype');
-        }
-
-        body {
-            background-color: black;
-            color: white;
-            font-family: '8bitoperator_jve', 'Courier New', monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 20px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .container { width: 100%; max-width: 800px; }
-
-        h2 { font-size: 3.5rem; color: #ffff00; text-align: center; margin-bottom: 50px; }
-
-        /* Hír blokk stílusa */
-        .news-post {
-            border: 4px solid white;
-            padding: 25px;
-            margin-bottom: 40px;
-            position: relative;
-            background: black;
-        }
-
-        .news-date {
-            color: #ff0000; /* Piros, mint a HP */
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .news-title {
-            font-size: 2.2rem;
-            color: #ffff00;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .news-content {
-            font-size: 1.5rem;
-            line-height: 1.6;
-            color: white;
-        }
-
-        /* Dekorációs csillag a hírek között */
-        .news-post::after {
-            content: "★";
-            color: #ffff00;
-            position: absolute;
-            bottom: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.5rem;
-        }
-
-        .news-post:last-child::after { content: ""; }
-
-        .back-btn {
-            margin: 40px auto;
-            display: table;
-            color: white;
-            text-decoration: none;
-            font-size: 1.8rem;
-            border: 4px solid white;
-            padding: 10px 40px;
-            transition: 0.1s;
-        }
-
-        .back-btn:hover { color: #ffff00; border-color: #ffff00; }
-    </style>
+    <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
-    <div class="container">
+    <header>
         <h2>FRISS HÍREK</h2>
-
+    </header>
+    <main class="container">
         <div class="news-post">
-            <span class="news-date">2024. 05. 20.</span>
-            <span class="news-title">* ELINDULT A WEBOLDAL!</span>
+            <span class="news-date">2026. 03. 22.</span>
+            <span class="news-title">ELINDULT A WEBOLDAL!</span>
             <div class="news-content">
                 * ÜDVÖZÖLLEK A PROJEKT HIVATALOS OLDALÁN.<br>
                 * MOSTANTÓL ITT KÖVETHETITEK A FORDÍTÁS ÁLLÁSÁT.
             </div>
         </div>
 
-        <a href="../" class="back-btn">< VISSZA A FŐOLDALRA</a>
-    </div>
+        <a href="../" class="back-button">< VISSZA</a>
+    </main>
 </body>
 </html>

@@ -5,121 +5,13 @@
     <meta name="theme-color" content="#000000">
     <title>Csapat - Undertale Magyarul</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <style>
-        @font-face {
-            font-family: '8bitoperator_jve';
-            src: url('../assets/8bitoperator_jve.ttf') format('truetype');
-        }
-
-        body {
-            background-color: black;
-            color: white;
-            font-family: '8bitoperator_jve', 'Courier New', monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 20px;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .container { width: 100%; max-width: 750px; }
-
-        h2 { font-size: 3.5rem; color: #ffff00; text-align: center; margin-bottom: 60px; }
-
-        .team-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .member-card {
-            display: flex;
-            align-items: center;
-            border: 5px solid white;
-            padding: 15px 25px;
-            background: black;
-            transition: 0.1s;
-        }
-
-        .member-card:hover {
-            border-color: #ffff00;
-        }
-
-        .member-icon {
-            width: 60px;
-            height: 60px;
-            margin-right: 25px;
-            image-rendering: pixelated;
-            object-fit: contain;
-            border: 1px solid #333; 
-        }
-
-        .member-info {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .name {
-            font-size: 2rem;
-            color: white;
-        }
-
-        .member-card:hover .name {
-            color: #ffff00;
-        }
-
-        .role {
-            font-size: 1.2rem;
-            color: #aaa;
-            margin-top: 5px;
-        }
-
-        /* YouTube Gomb Stílusa */
-        .yt-btn {
-            background-color: #ff0000;
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
-            font-size: 1.2rem;
-            border: 3px solid white;
-            transition: 0.1s;
-            margin-left: 15px;
-        }
-
-        .yt-btn:hover {
-            background-color: white;
-            color: #ff0000;
-            border-color: #ff0000;
-        }
-
-        .back-btn {
-            margin-top: 60px;
-            display: inline-block;
-            color: white;
-            text-decoration: none;
-            font-size: 1.8rem;
-            border: 4px solid white;
-            padding: 10px 40px;
-        }
-
-        .back-btn:hover { color: #ffff00; border-color: #ffff00; }
-
-        /* Jogi szöveg stílusa */
-        .disclaimer {
-            margin-top: 60px;
-            color: #666;
-            font-size: 0.9rem;
-            text-align: center;
-            text-transform: none;
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/style.css" />
 </head>
 <body>
-    <div class="container">
+    <header>
         <h2>A FORDÍTÓ CSAPAT</h2>
-
+    </header>
+    <main class="container">
         <div class="team-grid">
             
             <div class="member-card">
@@ -128,16 +20,16 @@
                     <span class="name">RudyG</span>
                     <span class="role">Szövegek</span>
                 </div>
-                <a href="https://www.youtube.com/@RudiG111" target="_blank" class="yt-btn">YOUTUBE</a>
+                <a href="https://www.youtube.com/@RudiG111" target="_blank" class="social-button youtube">YOUTUBE</a>
             </div>
 
             <div class="member-card">
-                <img src="../assets/roberd.png" alt="roberd" class="member-icon">
+                <img src="http://www.gravatar.com/avatar.php?gravatar_id=f9e9837d9ef0ef80935ee1525823fb77" alt="roberd" class="member-icon">
                 <div class="member-info">
                     <span class="name">roberd</span>
                     <span class="role">Szövegek, Textúrák</span>
                 </div>
-                <a href="https://www.youtube.com/@roberd82-dev" target="_blank" class="yt-btn">YOUTUBE</a>
+                <a href="https://linktr.ee/roberd82" target="_blank" class="social-button linktree">LINKTREE</a>
             </div>
 
             <div class="member-card">
@@ -146,7 +38,7 @@
                     <span class="name">Egy a sok közül (Áron)</span>
                     <span class="role">Virágka magyar hangja</span>
                 </div>
-                <a href="https://www.youtube.com/@Egyasok" target="_blank" class="yt-btn">YOUTUBE</a>
+                <a href="https://www.youtube.com/@Egyasok" target="_blank" class="social-button youtube">YOUTUBE</a>
             </div>
 
             <div class="member-card">
@@ -155,18 +47,12 @@
                     <span class="name">KingroliDEV</span>
                     <span class="role">Textúrák</span>
                 </div>
-                <a href="https://www.youtube.com/@MiscEntVids" target="_blank" class="yt-btn">YOUTUBE</a>
+                <a href="https://www.youtube.com/@MiscEntVids" target="_blank" class="social-button youtube">YOUTUBE</a>
             </div>
 
         </div>
 
-        <center>
-            <a href="../" class="back-btn">< VISSZA</a>
-        </center>
-
-        <div class="disclaimer">
-            * AZ UNDERTALE™ TOBY FOX VÉDJEGYE. EZ EGY NEM HIVATALOS FORDÍTÁS.
-        </div>
-    </div>
+        <a href="../" class="back-button">< VISSZA</a>
+    </main>
 </body>
 </html>
