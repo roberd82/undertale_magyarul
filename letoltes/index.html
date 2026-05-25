@@ -3,63 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#000000">
-    <title>Letöltés - Undertale Magyarul</title>
+    <title>Letöltések - Undertale Magyarul</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="stylesheet" href="../assets/style.css" />
-    <style>
-        .download-grid {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 80px;
-        }
-
-        /* Alap gomb stílus */
-        .dl-box {
-            border: 6px solid white;
-            padding: 30px;
-            width: 300px;
-            text-decoration: none;
-            color: white;
-            transition: 0.1s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: black;
-        }
-
-        .dl-title { font-size: 2.5rem; margin-bottom: 15px; }
-        .dl-info { font-size: 1.2rem; color: #aaa; }
-
-        /* Aktív Demó gomb */
-        .active-dl:hover {
-            border-color: #ffff00;
-            color: #ffff00;
-            transform: scale(1.05);
-        }
-
-        /* Inaktív Teljes verzió gomb */
-        .disabled-dl {
-            border-color: #444;
-            color: #444;
-            cursor: not-allowed;
-        }
-
-        .coming-soon {
-            color: #ff0000;
-            font-size: 1.5rem;
-            margin-top: 10px;
-        }
-
-        .warning-text {
-            margin-top: 40px;
-            font-size: 1.2rem;
-            color: #888;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -69,16 +15,16 @@
     <main class="container">
         <div class="download-grid">
             
-            <a href="https://gitea.roberd.me/RudiG111/undertale-magyarul/releases/download/0.2/UndertaleDemoHU.zip" class="dl-box active-dl">
+            <a href="https://gitea.roberd.me/RudiG111/undertale-magyarul/releases/download/0.2/UndertaleDemoHU.zip" class="dl-box active">
                 <span class="dl-title">DEMÓ</span>
                 <span class="dl-info">Verzió: 0.2</span>
-                <span style="color: #00ff00; margin-top: 10px;">LETÖLTÉS MOST</span>
+                <span class="dl-caption green">LETÖLTÉS MOST</span>
             </a>
 
-            <div class="dl-box disabled-dl">
+            <div class="dl-box disabled">
                 <span class="dl-title">TELJES</span>
                 <span class="dl-info">Verzió: -.-.-</span>
-                <span class="coming-soon">HAMAROSAN</span>
+                <span class="dl-caption red">HAMAROSAN</span>
             </div>
 
         </div>
